@@ -24,5 +24,17 @@
 ### Instalacion de frameworsks
 
 - Se utiliza `pipenv install nombreFramework`
+- En caso de usa una librería no instalada el error sera 'No module named 'nombreLibreria'' 
+- Las librerias instaladas se podrán ver en el archivo Pipfile.
 
+### Correr el proyecto
+
+- se utiliza `python nombreArchivoPrincipal.py`
+- por defecto arranca un servidor o entorno de desarrollo
+- para terminar o salir del modo servidor, se utiliza `CTRL + c`
+- es importante activar el modo debug en el documento para ver errores `(debug=True)`
+
+### Observaciones
+
+- 
 
