@@ -34,7 +34,20 @@
 - para terminar o salir del modo servidor, se utiliza `CTRL + c`
 - es importante activar el modo debug en el documento para ver errores `(debug=True)`
 
+#### Funciones del framework flask
+
+- `render_tempalte("nombreArchivo.html")`, sirve para retornar un html desde la carpeta templates
+
+- `request()`, para identificar el metodo de la solicitud que esta recibiendo el endpoint ej: request.method='POST', por defecto las rutas responden a solicitudes GET. Además permite saber si se esta recibiendo datos desde la query.
+
+- `jsonify()`, permite devolver una respuesta en formato json.
+
 ### Observaciones
 
-- 
+
+- Para generar rutas se utiliza `@app.route("path", method=GET, POST, PUT, DELETE)`
+
+- Para usar dos metodos http dentro de una sola ruta, se  utiliza como segundo parametro entre corchetes, methods=['GET','POST', 'PUT', 'DELETE']
+
+
 
