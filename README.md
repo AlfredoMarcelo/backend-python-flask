@@ -13,7 +13,7 @@
 - En mac se utiliza `sudo pip3 install pipenv`, pedira contraseña
 
 
-#### Instalacio entorno virtual
+#### Instalacion entorno virtual
 
 - para instalar el entorno `pipenv --python=3.10`
 
@@ -40,7 +40,17 @@
 
 - `request()`, para identificar el metodo de la solicitud que esta recibiendo el endpoint ej: request.method='POST', por defecto las rutas responden a solicitudes GET. Además permite saber si se esta recibiendo datos desde la query.
 
-- `jsonify()`, permite devolver una respuesta en formato json.
+- `jsonify()`, permite devolver una respuesta en formato json. Retorna dos argumentos,la primera puede ser un string, datos, etc y la segunda es la respuesta a la solicitud, 200,300,400,500. 
+Ej: ` return jsonify({"msg":"El nombre es requerido."}),400`
+Ej2; `return jsonify(data)`
+
+- request.get_json(), obtiene el json que viende desde el cliente. Para acceder a una de sus propiedades o para guardarlas dentro de una variable, se utiliza el nombre de la variable y destrcturing de objeto ej:
+`data = request.get_json()
+ nombrePropiedad = data['key']
+`
+
+- request.json.get(), recibe dos argumentos, el primero es el nombre del atributo o propiedad y el segundo es el valor por defecto que le queremos asignar a la propiedad en caso de que venga sin valor. Ej:
+`label = request.json.get("nombrePropiedad", valorPorDefecto)`
 
 ### Observaciones
 
